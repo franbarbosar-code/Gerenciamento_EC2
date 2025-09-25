@@ -1,0 +1,16 @@
+O que é AMI na AWS?
+A AMI é tipo uma cópia exata de um computador que já está pronto e configurado. É um "molde" ou um "pacote" que tem tudo dentro: o sistema operacional (tipo Windows ou Linux), os programas que você precisa, e todas as configurações.
+
+Quando você quer criar um servidor na nuvem da AWS, em vez de começar do zero, você escolhe uma AMI. É como se você dissesse: "AWS, por favor, faça uma cópia desse molde para mim e ligue ela". E a AWS cria seu novo servidor rapidinho, já com tudo instalado.
+
+Pra que isso serve?
+
+É a melhor forma de economizar tempo e garantir que todos os seus servidores sejam iguais. Se você tem um servidor que já está perfeito, você pode criar uma AMI dele e usar esse molde para criar quantos servidores precisar. Isso é ótimo para manter a ordem e a consistência.
+
+Tipos de AMIs:
+
+Da AWS: São os mais básicos. Vêm só com o sistema operacional, prontos para a gente começar a usar.
+
+De outras pessoas (Marketplace): São "moldes" que outras empresas criaram. Eles já vêm com programas mais complexos instalados, como um servidor de banco de dados. Às vezes são pagos, outras vezes são de graça.
+
+Os nossos próprios: Se a gente configura um servidor do nosso jeito (por exemplo, com um site e um banco de dados), a gente pode tirar uma "foto" dele e transformar em uma AMI nossa. A partir daí, podemos criar quantas cópias quisermos desse mesmo servidor.

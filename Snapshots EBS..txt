@@ -1,0 +1,29 @@
+Snapshots EBS.
+
+O EBS (Elastic Block Store) é o "disco rígido" do servidor na AWS. É onde todos os meus arquivos e dados ficam salvos.
+
+Um Snapshot é tipo um backup desse disco. Não é só uma cópia simples, é uma "foto instantânea" do meu volume EBS em um momento específico.
+
+O que eu preciso lembrar sobre Snapshots?
+
+Eles são incrementais: Isso é o mais legal. Quando eu tiro o primeiro snapshot, a AWS salva todos os dados. Mas nos próximos, ela só salva o que mudou desde a última "foto". Isso economiza muito tempo e espaço de armazenamento (e consequentemente, dinheiro).
+
+Armazenamento no S3: Os snapshots não ficam no meu servidor. A AWS armazena eles no Amazon S3, que é um serviço de armazenamento de arquivos superseguro e durável. Eu não preciso me preocupar com onde eles estão.
+
+Recuperação de dados: Se alguma coisa acontecer com meu servidor (eu apagar um arquivo por engano ou o disco falhar), eu posso usar um snapshot para criar um novo volume EBS. É como se eu "voltasse no tempo" para a hora em que o snapshot foi tirado.
+
+Compartilhamento: Eu posso compartilhar meus snapshots com outras contas da AWS. Isso é útil para mandar uma cópia de um volume para um colega, por exemplo.
+
+Quando eu devo usar Snapshots?
+
+Antes de grandes mudanças: Se eu for fazer uma atualização importante no meu servidor, é uma ótima ideia tirar um snapshot antes. Se algo der errado, eu posso voltar à versão anterior.
+
+Backups agendados: Para ter certeza de que meus dados estão seguros, eu posso configurar a AWS para tirar snapshots automaticamente todos os dias ou semanas.
+
+Como funciona na prática?
+
+Eu vou no painel do EC2 e escolho o meu volume EBS.
+
+Clico em "Ações" e depois em "Criar Snapshot".
+
+Pronto, a AWS vai tirar a "foto". O volume pode continuar sendo usado enquanto a "foto" é feita.
